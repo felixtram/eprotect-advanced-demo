@@ -9,6 +9,8 @@
   <title>iFrame Advanced Demo</title>  
   <link rel="icon" type="image/png" href="images/favicon.ico">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/codemirror.css">
+    <link rel="stylesheet" href="style/night.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <!-- Style to be overwritten -->
@@ -18,17 +20,33 @@
 </head>
   
 <body>
-<div class="container">
-  <h1> test </h1>
+  <div class="container">
+    <h1> test </h1>
 
-  <form>
-    <textarea placeholder="Enter CSS here"></textarea>
-  </form>
-  <a href="#" onclick="return false" class="btn">TRY IT!</a>
-</div>
+Input your own style or drag and drop a CSS file
+<!-- BEGIN TEXT AREA -->
+<textarea id="customCss">
+h1{ 
+  color: green; 
+}</textarea>
+<!-- END TEXT AREA -->
+    
+    <a href="#" id="changeCss" onclick="return false" class="btn">
+      Try It!
+    </a>
+  </div>
+
+<div class="loading-wrap"><div class="loader"></div></div>
+  
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts/script.js"></script>
+  <script type="text/javascript" src="scripts/codemirror.js"></script>
+  <script type="text/javascript" src="scripts/mode/css.js"></script>
 
+  <script> 
+    ;
+    init(); 
+  </script>
 </body>
 
 </html>
