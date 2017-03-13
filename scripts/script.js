@@ -28,15 +28,21 @@ function init(){
 	});
 
 	//add syntax hightlighting to textarea
-  var editor = CodeMirror.fromTextArea( document.getElementById("customCss"), {
-    theme: "night",
-    tabSize: 2
-  });
+      var editor = CodeMirror.fromTextArea( document.getElementById("customCss"), {
+        theme: "night",
+        tabSize: 2
+      });
 
 	//add event handler to button
 	$("#changeCss").on("click", function(){
 		var customCss = editor.getValue();
-		changeCss( customCss );
+
+        //transition and change css
+        $("#payForm").fadeTo(750, 0, function(){
+            changeCss( customCss );    
+        });
+        
+        $("#payForm").fadeTo(750, 1);
 	})	
 
 	//remove loading div

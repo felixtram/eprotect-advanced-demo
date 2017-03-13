@@ -8,10 +8,19 @@
   <meta name="author" content="">
   <title>iFrame Advanced Demo</title>  
   <link rel="icon" type="image/png" href="images/favicon.ico">
+  <!-- Page Style -->
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/codemirror.css">
-    <link rel="stylesheet" href="style/night.css">
+  <link rel="stylesheet" href="style/night.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- End Page Style-->
+
+  <!-- Form CSS --> 
+  <link rel="stylesheet" href="style/font-awesome.min.css">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/skeleton.css">
+
+  <!-- End Form CSS-->
 
   <!-- Style to be overwritten -->
   <style> 
@@ -21,22 +30,99 @@
   
 <body>
   <div class="container">
-    <h1> test </h1>
+    
 
-Input your own style or drag and drop a CSS file
+      <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row" id="payForm">
+      <div class="one-half column">
+        <h4>iFrame Enhancements Basic Page</h4>
+        <p>This index.html page is a placeholder with the CSS, font and favicon. It also demo's the iframe enhancements for
+          the eprotect form using a light modified responsive stylesheet called Skeleton and a browser normalizing CSS. If
+          you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+
+      </div>
+      <div class="one-half column">
+        <form>
+          <div class="positionNumberDiv">
+            <div class="numberDiv">
+              <label for="accountnumber"> Card Number </label>
+              <input type="text" id="accountnumber" name="pan" pattern="[0-9]{13,16}" maxlength="16" placeholder="Credit Card Number">
+              <i id="ccicon" class="fa fa-cc-amex" aria-hidden="true"></i><br>
+              <small>lil small text</small>
+            </div>
+          </div>
+
+          <div class="positionExpDateDiv">
+            <div class="expDateDiv">
+              <label for="expMonth">Card Expiration Date</label>
+              <input type="text" id="expMonth" list="expMonth" pattern="[0-9]{2}" size="3" name="expMonth" maxlength="2" placeholder="01">
+              <datalist id="expMonth">
+                <option value="01">Jan</option>
+                <option value="02">Feb</option>
+                <option value="03">Mar</option>
+                <option value="04">Apr</option>
+                <option value="05">May</option>
+                <option value="06">Jun</option>
+                <option value="07">Jul</option>
+                <option value="08">Aug</option>
+                <option value="09">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+              </datalist> /
+              <input type="text" id="expYear" list="expYear" pattern="[0-9]{2}" maxlength="2" size="3" name="expYear" placeholder="17">
+              <datalist id="expYear">
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+                <option value="24">2024</option>
+                <option value="25">2025</option>
+                <option value="26">2026</option>
+                <option value="27">2027</option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="positionCvvDiv">
+            <div class="cvvDiv">
+              <label for="cvc">Security Code</label>
+              <input type="text" id="cvc" pattern="[0-9]{3,4}" maxlength="4" size="4" name="cvc" placeholder="CVC">
+            </div>
+          </div>
+
+        </form>
+        <input class="button-primary" type="submit" value="submit input">
+      </div>
+    </div>
+  </div>
+  Input your own style or drag and drop a CSS file
+
 <!-- BEGIN TEXT AREA -->
 <textarea id="customCss">
-h1{ 
-  color: green; 
-}</textarea>
+h4{ 
+  color: red; 
+}
+input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, 
+input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0;
+}
+</textarea>
 <!-- END TEXT AREA -->
-    
-    <a href="#" id="changeCss" onclick="return false" class="btn">
-      Try It!
-    </a>
-  </div>
 
-<div class="loading-wrap"><div class="loader"></div></div>
+  <input class="button-primary" id="changeCss" type="submit" value="TRY IT">
+</div>
+
+<div class="loading-wrap">
+  <div class="loader">    
+  </div>
+</div>
   
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts/script.js"></script>

@@ -1,34 +1,9 @@
-*{
-	font-family: "Roboto",Helvetica,sans-serif;
-	font-size: 1rem;
-}
-
 .container{
 	width: 80%;
 	margin: auto;
 }
 .CodeMirror{
 	margin-bottom: 1em;
-}
-
-.btn{
-	margin-top: 2rem;
-  padding: .5rem 1.5rem;
-	line-height: 2.25rem;
-  letter-spacing: 2px;
-  font-size: 1.1em;
-	text-decoration: none;
-	color: white;
-	background-color: #00a9e0;
-	text-align: center;
-	cursor: pointer;
-	/*float: right;*/
-	box-shadow: 0 0 0 2px #00a9e0 inset;
-}
-
-.btn:hover{
-  background-color: #009dd1;
-  box-shadow: 0 0 0 2px #009dd1 inset;
 }
 
 /* LOADER */
