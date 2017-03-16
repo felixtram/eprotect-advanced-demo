@@ -12,13 +12,18 @@ function init() {
   allowTabsInTextArea();
 
   //create codemirror to add syntzx highlighting
-  var editor = CodeMirror.fromTextArea(document.getElementById("customCss"), {
-    theme: "night",
-    tabSize: 2
-  });
-
+  //var editor = CodeMirror.fromTextArea(document.getElementById("customCss"), {
+    //theme: "night",
+    //tabSize: 2,
+    //lineNumbers: true
+  //});
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/css");
+    editor.setShowPrintMargin(false);
   //add event handler to change css on button click
   $("#changeCss").on("click", function() {
+    var editor = ace.edit("editor");
     var customCss = editor.getValue();
 
     //transition and change css
@@ -31,7 +36,7 @@ function init() {
 
   //add event handler to download css on button click 
   $("#downloadCss").on("click", function() {
-    downloadInnerHtml("test.css", 'text');
+    downloadCss("test.css", 'text');
   })
 
   //remove loading div
@@ -78,18 +83,16 @@ function allowTabsInTextArea(){
  */
 function changeCss(newCss) {
   //replace current style with customCss string
-  $("<style>" + newCss + "</style>").replaceAll("style");
+  $("<style>" + newCss + "</style>").replaceAll("#change");
 }
 
 /**
  * Allow users to download css from textarea
- * @function downloadInnerHtml
- * @param {String} filename
- * @param {String} mimeType
+ * @function downloadCss
  */
-function downloadInnerHtml(filename, mimeType) {
-  var editor = $('.CodeMirror')[0].CodeMirror;
-
+function downloadCss() {
+  //var editor = $('.CodeMirror')[0].CodeMirror;
+  var editor = ace.edit("editor");
   var elHtml = editor.getValue();
   download(elHtml, "test.css", "text/css");
 }

@@ -23,7 +23,7 @@
   <!-- End Form CSS-->
 
   <!-- Style to be overwritten -->
-  <style> 
+  <style id="change"> 
     h1{ color: CornFlowerBlue; }
   </style>
 </head>
@@ -101,10 +101,30 @@
       </div>
     </div>
   </div>
-  Input your own style or drag and drop a CSS file
+  <div id="editor">input[type="email"]:focus, input[type="number"]:focus,input[type="search"]:focus, 
+input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, 
+input[type="password"]:focus, textarea:focus, select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0;
+}
+input:valid, .valid {
+    border-color: green;
+}
+input[type="email"], input[type="number"], input[type="search"], 
+input[type="text"], input[type="tel"], input[type="url"], 
+input[type="password"], textarea, select {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+</div>
 
 <!-- BEGIN TEXT AREA -->
-<textarea id="customCss">
+<!-- <textarea id="customCss">
 h4{ 
   color: red; 
 }
@@ -126,7 +146,7 @@ input[type="tel"], input[type="url"], input[type="password"], textarea, select {
     box-shadow: none;
     box-sizing: border-box;
 }
-</textarea>
+</textarea> -->
 <!-- END TEXT AREA -->
 
   <input class="button-primary" id="changeCss" type="submit" value="TRY IT">
@@ -140,13 +160,18 @@ input[type="tel"], input[type="url"], input[type="password"], textarea, select {
   
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts/codemirror.js"></script>
+    <script src="/scripts/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
   <script type="text/javascript" src="scripts/script.js"></script>
 
   <script type="text/javascript" src="scripts/mode/css.js"></script>
 
   <script> 
     init(); 
+
   </script>
+
+
 </body>
 
 </html>
