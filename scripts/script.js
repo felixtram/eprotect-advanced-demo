@@ -83,7 +83,7 @@ function allowTabsInTextArea(){
  */
 function changeCss(newCss) {
   //replace current style with customCss string
-  $("<style>" + newCss + "</style>").replaceAll("#change");
+  $("<style id='change'>" + newCss + "</style>").replaceAll("#change");
 }
 
 /**

@@ -10,9 +10,8 @@
   <link rel="icon" type="image/png" href="images/favicon.ico">
   <!-- Page Style -->
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/codemirror.css">
-  <link rel="stylesheet" href="style/night.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
   <!-- End Page Style-->
 
   <!-- Form CSS --> 
@@ -101,33 +100,9 @@
       </div>
     </div>
   </div>
-  <div id="editor">input[type="email"]:focus, input[type="number"]:focus,input[type="search"]:focus, 
-input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, 
-input[type="password"]:focus, textarea:focus, select:focus {
-    border: 1px solid #33C3F0;
-    outline: 0;
-}
-input:valid, .valid {
-    border-color: green;
-}
-input[type="email"], input[type="number"], input[type="search"], 
-input[type="text"], input[type="tel"], input[type="url"], 
-input[type="password"], textarea, select {
-    height: 38px;
-    padding: 6px 10px;
-    background-color: #fff;
-    border: 1px solid #D1D1D1;
-    border-radius: 4px;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-</div>
+  Input your own style or drag and drop a CSS file
 
-<!-- BEGIN TEXT AREA -->
-<!-- <textarea id="customCss">
-h4{ 
-  color: red; 
-}
+  <div id="editor">
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, 
 input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
     border: 1px solid #33C3F0;
@@ -146,8 +121,7 @@ input[type="tel"], input[type="url"], input[type="password"], textarea, select {
     box-shadow: none;
     box-sizing: border-box;
 }
-</textarea> -->
-<!-- END TEXT AREA -->
+</div>
 
   <input class="button-primary" id="changeCss" type="submit" value="TRY IT">
   <input class="button-primary" id="downloadCss" type="submit" value="DOWNLOAD CSS">
@@ -159,12 +133,9 @@ input[type="tel"], input[type="url"], input[type="password"], textarea, select {
 </div>
   
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="scripts/codemirror.js"></script>
-    <script src="/scripts/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
+  <script src="/scripts/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/script.js"></script>
-
-  <script type="text/javascript" src="scripts/mode/css.js"></script>
 
   <script> 
     init(); 
