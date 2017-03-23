@@ -26,11 +26,11 @@ function init() {
     var customCss = editor.getValue();
 
     //transition and change css
-    $("#payForm").fadeTo(750, 0, function() {
+    $("iframe").fadeTo(750, 0, function() {
       changeCss(customCss);
     });
 
-    $("#payForm").fadeTo(750, 1);
+    $("iframe").fadeTo(750, 1);
   })
 
   //add event handler to download css on button click 
@@ -53,7 +53,8 @@ function init() {
  */
 function changeCss(newCss) {
   //replace current style with customCss string
-  $("<style id='change'>" + newCss + "</style>").replaceAll("#change");
+   $("iframe").contents().find("#change")[0].innerText = newCss;
+
 }
 
 /**
