@@ -52,9 +52,10 @@ function init() {
  * @param {String} newCss
  */
 function changeCss(newCss) {
+  console.log(newCss);
   //replace current style with customCss string
-   $("iframe").contents().find("#change")[0].innerText = newCss;
-
+   $("iframe").contents().find("#change")[0].innerHTML = newCss;
+   //document.body.style = newcss;
 }
 
 /**
