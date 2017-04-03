@@ -1,7 +1,7 @@
 /*
-* Vantiv Skeleton V1 -- Based on Skeleton
+* Vantiv eProtect iFrame - loosely based on Skeleton: http://getskeleton.com/
 * Copyright 2017 -- Team Unisaurus Rex & Copyright 2014, Dave Gamache
-* www.getskeleton.com  &  https://github.com/unisaurus-rex
+* https://github.com/unisaurus-rex
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 * 3/14/2017
@@ -79,7 +79,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.25em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -117,7 +117,7 @@ a {
 a:hover {
   color: #0FA0CE; }
 
-  /* Images
+  /* Images (responsive)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 img {
@@ -308,7 +308,7 @@ label.invalid:after {
      
 /* Tooltip
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+/* If you decide to completely opt-out of the tooltip option remove all the code from here to the next section*/
 .tooltip {
     position: relative;
     display: inline-block;
@@ -352,7 +352,7 @@ label.invalid:after {
     content:"CSS content text for card number:";}
 #expTip.tooltip:hover .tooltiptext:before {
     content:"CSS content text for expiration date"}
-#cvcTip.tooltip:hover .tooltiptext:before {
+#cvvTip.tooltip:hover .tooltiptext:before {
     display: block;  
     content:"Your tool tip content here! Idealy, this should be short and sweet"}
 
@@ -360,7 +360,7 @@ label.invalid:after {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
 Note: To remove modal functionality add "display:none;" to the class modals.
-To add modal functionality remove "display:none;" from class modals
+To add modal functionality remove "display:none;" from class modals -OR- remove the entire section
 */
 
 .modals{
@@ -368,7 +368,7 @@ To add modal functionality remove "display:none;" from class modals
   /* To add modal functionality remove "display:none;" from class modals*/
   /*display: none; */
 }
-#accountnumberModal:before{
+#accountNumberModal:before{
   content: "CSS content text for card number";}
 #expDateModal:before{
   content: "CSS content text for expiration date";}
