@@ -73,15 +73,12 @@ function panBlur() {
  * @param {Object} e - event object
  */
 function panPaste(e) {
-  //get pan
-  //var pan = e.originalEvent.clipboardData.getData('Text');
-
   if (window.clipboardData && window.clipboardData.getData) { // IE
     var pan = window.clipboardData.getData('Text');
-}
-else if (event.originalEvent.clipboardData && event.originalEvent.clipboardData.getData) { // other browsers
-    var pan = e.originalEvent.clipboardData.getData('text/plain');
-}
+  }
+  else if (event.originalEvent.clipboardData && event.originalEvent.clipboardData.getData) { // other browsers
+      var pan = e.originalEvent.clipboardData.getData('text/plain');
+  }
 
   //strip spaces  
   pan = stripSpaces(pan);
