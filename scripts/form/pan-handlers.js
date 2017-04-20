@@ -76,7 +76,7 @@ function panPaste(e) {
   if (window.clipboardData && window.clipboardData.getData) { // IE
     var pan = window.clipboardData.getData('Text');
   }
-  else if (event.originalEvent.clipboardData && event.originalEvent.clipboardData.getData) { // other browsers
+  else if (e.originalEvent.clipboardData && e.originalEvent.clipboardData.getData) { // other browsers
       var pan = e.originalEvent.clipboardData.getData('text/plain');
   }
 
